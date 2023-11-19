@@ -1,0 +1,29 @@
+#health-coach {
+    padding: 100px 0;
+  background-color: #292f3b;
+  @include tab-max {
+  padding: 65px 0;
+  }
+  h3 {
+    font-size: 60px;
+    font-family: $oregano;
+    @include tab-max {
+    font-size: 40px;
+    }
+  }
+  p {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    line-height: 36px;
+    @include md-max {
+        font-size: 16px;
+        line-height: 28px;
+        br {
+            display: none;
+        }
+    }
+  }
+  a {
+  }
+}

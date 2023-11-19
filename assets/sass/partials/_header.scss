@@ -1,0 +1,174 @@
+header#header-section {
+  background-color: #252a35;
+  position: relative;
+  .container {
+    min-height: 100px;
+    overflow: hidden;
+    max-width: 1800px;
+    @include mobile-max {
+      min-height: 70px;
+    }
+  }
+  a.logo {
+    font-family: "Oregano", cursive;
+    font-weight: 400;
+    float: left;
+    margin-top: 23px;
+    @include rwd-max(1600) {
+      margin-top: 29px;
+    }
+    @include lg-max {
+      float: none;
+    }
+    @include mobile-max {
+    margin-top: 20px;
+    }
+    span {
+      font-size: 36px;
+      text-transform: capitalize;
+      @include rwd-max(1600) {
+        font-size: 30px;
+      }
+      @include mobile-max {
+      font-size: 22px;
+      }
+      &:first-child {
+        color: $green;
+      }
+      &:last-child {
+        color: $white;
+      }
+    }
+  }
+  i.fas.fa-bars {
+    font-size: 23px;
+    color: #fff;
+    transform: scale(1.5, 1.2);
+    cursor: pointer;
+    float: right;
+    margin-top: 36.2px;
+    transform-origin: right;
+    @include xl-min {
+      display: none;
+    }
+    @include mobile-max {
+    font-size: 18px;
+    margin-top: 26px;
+    }
+  }
+  nav.navigation {
+    margin-top: 36px;
+    @include xl-min {
+      float: right;
+    }
+    @include lg-max {
+      margin-top: 5px;
+      // margin-bottom: 15px;
+      height: 0;
+      overflow: hidden;
+      transition-duration: 0.5s;
+    }
+    ul {
+      @include xl-min {
+        float: left;
+      }
+      @include lg-max {
+        // margin-top: -7px;
+      }
+      // position: relative;
+      > span {
+        position: absolute;
+        content: " ";
+        height: 2.5px;
+        background-color: $green;
+        // width: 100%;
+        bottom: 31px;
+        transition-duration: 1s;
+        @include lg-max {
+          display: none;
+        }
+      }
+      &::after {
+        clear: both;
+        display: block;
+        content: " ";
+      }
+      li {
+        margin-left: 50px;
+        font-weight: 700;
+        font-size: 14px;
+        @include xl-min {
+          float: left;
+        }
+        @include rwd-max(1600) {
+          margin-left: 30px;
+          font-size: 12px;
+          &:last-child {
+            margin-top: -1px;
+          }
+        }
+        @include lg-max {
+          margin-left: 0;
+          padding-top: 1px;
+          padding-bottom: 1px;
+          font-size: 14px;
+        }
+        @include mobile-max {
+        font-size: 12px;
+        }
+        &:not(:last-child) {
+          margin-top: 9px;
+          a {
+            &:hover {
+              color: $green;
+              @include lg-max {
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+        a {
+          display: block;
+          text-transform: uppercase;
+          color: $white;
+          span {
+            font-size: 24px;
+            color: $green;
+            transform: translateY(2px);
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .header-social-icons {
+      margin-left: 40px;
+      padding-left: 40px;
+      font-size: 15px;
+      border-left: 1px solid #393d47;
+      margin-top: 6px;
+      @include xl-min {
+        float: right;
+      }
+      @include rwd-max(1600) {
+        margin-left: 20px;
+        padding-left: 20px;
+      }
+      @include lg-max {
+        padding-left: 0;
+        margin-left: 0;
+        border-left: 0;
+        margin-top: 10px;
+      }
+      @media (min-width: 1200px) and (max-width: 1270px) {
+        display: none;
+      }
+      a {
+        color: $white;
+        margin-left: 20px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

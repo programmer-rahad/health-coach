@@ -1,0 +1,103 @@
+#online-coaching {
+  .courses {
+    .course {
+      border: 1px solid #ebebeb;
+      width: calc(100% / 3 - 25px);
+      @include lg-max {
+        width: calc(100% / 3 - 15px);
+      }
+      @include tab-max {
+        width: calc(50% - 15px);
+      }
+      @include mobile-max {
+        max-width: 315px;
+        width: auto;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &:nth-child(2) {
+        margin-left: calc(75px / 2);
+        margin-right: calc(75px / 2);
+        @include lg-max {
+          margin-left: calc(45px / 2);
+          margin-right: calc(45px / 2);
+        }
+        @include tab-max {
+          margin-left: 30px;
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+        @include mobile-max {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        }
+        .course-content {
+          .course-content-bottom {
+            span {
+              color: $green;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+      &:last-child {
+        @include tab-max {
+          float: none;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 30px;
+          clear: both;
+        }
+      }
+      .course-img {
+        margin-bottom: 25px;
+        padding: 3px;
+        img {
+          width: 100%;
+        }
+      }
+      .course-content {
+        h4 {
+          font-size: 14px;
+          color: $secondary-color;
+          font-weight: 400;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        h3 {
+          font-size: 18px;
+          margin-bottom: 25px;
+          font-weight: 500;
+        }
+        .course-content-bottom {
+          border-top: 1px solid #ebebeb;
+          padding: 12px 15px;
+          padding-bottom: 8px;
+          span {
+            color: #f43535;
+            font-weight: 700;
+            font-size: 14px;
+          }
+          a {
+            color: $primary-color;
+            font-weight: 700;
+            font-size: 14px;
+            &:last-child {
+              margin-left: 20px;
+            }
+            i.fas {
+              color: #b2b6bb;
+              margin-right: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+  a.green-button {
+    margin-top: 40px;
+    box-shadow: 0px 7px 10px -3px rgba(0, 0, 0,.20);
+  }
+}

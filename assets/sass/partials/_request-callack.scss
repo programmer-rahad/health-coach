@@ -1,0 +1,55 @@
+#request-callack {
+    .container {
+        max-width: 1060px;
+    }
+    h2 {
+        margin-bottom: 25px;
+        padding-bottom: 0;
+        &::after {
+            display: none;
+        }
+    }
+    p {
+        line-height: 26px;
+        margin-bottom: 40px;
+    }
+    form {
+        input {
+            border: 1px solid #ebebeb;
+            border-radius: 30px;
+            padding: 13px 20px;
+            width: 26%;
+            &:focus {
+                border-color: #ccc;
+            }
+            @include mobile-max {
+            width: 100%;
+            margin-bottom: 15px;
+            }
+            &[type=submit] {
+                width: auto;
+                float: right;
+                width: 16%;
+                padding-left: 0;
+                cursor: pointer;
+                padding-right: 0;
+                &:hover {
+                    opacity: .8;
+                }
+                @include mobile-max {
+                width: 50%;
+                cursor: pointer;
+                float: left;
+                }
+            }
+            &:nth-child(2) {
+                margin-left: 2%;
+                margin-right: 2%;
+                @include mobile-max {
+                margin-left: 0;
+                margin-right: 0;
+                }
+            }
+        }
+    }
+}
